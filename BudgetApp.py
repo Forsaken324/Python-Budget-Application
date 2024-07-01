@@ -31,7 +31,7 @@ class Category:
             output += f"{item['description'][:23].ljust(23)}{item['amount']:>7.2f}\n"
         output += f"Total: {self.get_balance():.2f}"
         return output
-
+# creating the create send chart
 
 def create_spend_chart(categories):
     spent = [sum(item['amount'] for item in cat.ledger if item['amount'] < 0) for cat in categories]
